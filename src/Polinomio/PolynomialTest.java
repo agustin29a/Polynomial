@@ -61,8 +61,7 @@ class PolynomialTest {
 	
 	@Test
 	public void testEqualsTrue() {
-		int array3[] = {5,3};
-		Object polinomio3 = new Polynomial(array3);
+		Object polinomio3 = polinomio;
 		assertEquals(true, polinomio.equals(polinomio3));
 	
 		

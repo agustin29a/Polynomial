@@ -1,7 +1,7 @@
 package Polinomio;
 import java.util.NoSuchElementException;
 
-public class Polynomial {
+public class Polynomial extends Object {
 	
 	private Node root;
 	private int count;
@@ -78,23 +78,10 @@ public class Polynomial {
 		return total;
 	}
 	
+	
 	public boolean equals(Object x) {
-		Polynomial e = (Polynomial) x;
-		Node p = root;
-		boolean flat = false;
-		if (count == e.countValue()) {
-			flat = true;
-			while (p != null && flat) {
-				if(p.value == e.getCoefficient(p.exponent) ) {
-					p = p.next;
-				}else {
-					flat = false;
-					break;
-				}
-			}
-		}
-		if (flat) {
-			return true;
+		if (this == x) {
+		 return true;
 		}
 		return false;
 	}
